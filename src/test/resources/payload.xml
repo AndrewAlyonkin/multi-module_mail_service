@@ -1,23 +1,32 @@
 <Payload xmlns="http://javaops.ru"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://javaops.ru payload.xsd">
-    <Users>
-        <User flag="active" city="kiv">
-            <email>gmail@gmail.com</email>
-            <fullName>Full Name</fullName>
-        </User>
-        <User flag="superuser" city="spb">
-            <email>admin@javaops.ru</email>
-            <fullName>Admin</fullName>
-        </User>
-        <User flag="deleted" city="spb">
-            <email>mail@yandex.ru</email>
-            <fullName>Deleted</fullName>
-        </User>
-    </Users>
+    <Projects>
+        <Project name="topJava">
+            <description>Spring project</description>
+            <Group name="topJava10" type="current"/>
+            <Group name="topJava11" type="finished"/>
+            <Group name="topJava12" type="registering"/>
+        </Project>
+        <Project name="MaserJava">
+            <description>Multi-module maven project</description>
+            <Group name="masterJava007" type="current"/>
+        </Project>
+    </Projects>
+
     <Cities>
         <City id="spb">Санкт-Петербург</City>
         <City id="kiv">Киев</City>
         <City id="mnsk">Минск</City>
+        <City id="irk">Иркутск</City>
     </Cities>
+
+    <Users>
+        <User flag="active" city="kiv" email="firstUser@gmail.com" groupRefs="topJava10 masterJava007">Full Name</User>
+        <User flag="active" city="irk" email="secondUser@gmail.com" groupRefs="topJava10 masterJava007">Full Name</User>
+        <User flag="active" city="mnsk" email="third@gmail.com" groupRefs="topJava10 masterJava007">Full Name</User>
+        <User flag="active" city="spb" email="gmail@gmail.com" groupRefs="topJava10 masterJava007">Full Name</User>
+        <User flag="superuser" city="spb" email="admin@javaops.ru">Admin</User>
+        <User flag="deleted" city="spb" email="mail@yandex.ru">Deleted</User>
+    </Users>
 </Payload>
